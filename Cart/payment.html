@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css" />
+	<link rel="stylesheet" href="../commonstyle.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+</head>
+<body>
+    <section class="payment">
+        <div class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="payment_method">
+                        <div class="payment__info">
+                            <div class="main__header">
+                                <a href="https://www.h2gaming.vn/" class="logo" target="_self">
+                                    <h1 class="logo__text">H2gaming.vn</h1>
+                                </a>
+                                <ul class="info__link">
+                                    <li class="link__cart">
+                                        <a href="">Giỏ hàng</a>
+                                    </li>
+                                    <li class="info__cartlink__payment">
+                                        <a href="">Thông tin giỏ hàng</a>
+                                    </li>
+                                    <li class="link__payment">
+                                        Phương thức thanh toán
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main">
+                                <form action="payment.php" class="main_payment" method="POST">
+                                    <div class="main__shipping">
+                                        <h3>Phương thức vận chuyển</h3>
+                                        <label for="shipping" class="shipping">
+                                            <input type="radio" name="shipping" id="shipping" >Giao hàng tận nơi <br>
+                                        </label>
+                                    </div>
+                                    <div class="main__payment__method">
+                                        <h3>Phương thức thanh toán</h3>
+                                        <div class="content__box">
+                                            <label for="payment__COD" class="payment__COD">
+                                                <input type="radio" name="shipping" id="payment__COD" >Thanh toán khi nhận hàng(COD)<br>
+                                            </label>
+                                            <label for="payment__MOMO" class="payment__MOMO">
+                                                <input type="radio" name="shipping" id="payment__MOMO" >Thanh toán online qua ví MoMo<br>
+                                            </label>
+                                            <label for="payment__ATM" class="payment__ATM">
+                                                <input type="radio" name="shipping" id="payment__ATM" >Thanh toán online bằng thẻ ATM nội địa/Internet Banking<br>
+                                            </label>
+                                            <label for="payment__VISA" class="payment__VISA">
+                                                <input type="radio" name="shipping" id="payment__VISA" >Thanh toán online bằng thẻ Visa/Master/JCB<br>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="payment__click">
+                                        <a href="https://gearvn.com/cart">
+                                            <svg class="previous-link-icon icon-chevron icon" xmlns="http://www.w3.org/2000/svg" width="6.7" height="11.3" viewBox="0 0 6.7 11.3">
+                                                <path d="M6.7 1.1l-1-1.1-4.6 4.6-1.1 1.1 1.1 1 4.6 4.6 1-1-4.6-4.6z"></path>
+                                            </svg>
+                                            Quay lại thông tin giao hàng
+                                        </a>
+                                        <button type="submit" value="submit" name="submit">Hoàn tất đơn hàng</button>
+                                    </div>
+                                </form>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto total">
+					<div class="total__cost">
+						<div class="product">
+							<div class="product__img">
+								<img src="images/1.webp" alt="">
+								<span class="product__sl">1</span>
+							</div>
+							<span class="product__name">Bàn phím E-Dra</span>
+							<span class="product__price">740,000đ</span>
+						</div>
+						<form action="info_pay" method="POST" class="product__discount">
+							<input type="text" placeholder="Mã giảm giá" size="30" id="input__discount" name="input__discount" />
+							<button type="submit" value="submit__discount" name="submit_discount">Sử dụng</button>
+						</form>
+						<div class="total__line">
+							<div class="total__line__subtotal">
+								<span class="total__line__name">Tạm tính</span>
+								<span class="total__line__price">740,000đ</span> <br>
+							</div>
+							<div class="total__line__shipping">
+							<span class="total__line__name">Phí vận chuyển</span>
+								<span class="total__line__price">Miễn phí</span> <br>
+							</div>
+						</div>
+						<div class="total__line__footer">
+							<span class="total__line__name">Tổng tiền</span>
+							<span class="total__line__price">740,000đ</span> <br>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
