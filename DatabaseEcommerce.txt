@@ -91,7 +91,7 @@ CREATE TABLE detailmainboard
     baohanh varchar(50),
     tinhtrang varchar(50),
     mahang varchar(50),
-    giaban varchar(50),
+    giaban varchar(50)
 );
 
 CREATE TABLE detailmonitor
