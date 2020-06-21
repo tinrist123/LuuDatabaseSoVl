@@ -1,0 +1,167 @@
+CREATE TABLE detailchuot
+(
+	idchuot int AUTO_INCREMENT PRIMARY KEY,
+    thuonghieu varchar(100),
+    baohanh varchar(100),
+    kieuketnoi varchar(100),
+    ketnoi varchar(100),
+    mausac varchar(100),
+    switch varchar(100),
+    dophangiai varchar(100),
+    dangcambien varchar(100),
+    sonutbam varchar(50),
+    denled varchar(50),
+    kichthuoc varchar(50),
+    khoiluong varchar(50),
+    more varchar(50),
+    giaban varchar(50)
+);
+
+CREATE TABLE detailhdd
+(
+	idhdd int AUTO_INCREMENT PRIMARY KEY,
+    thuonghieu varchar(100),
+    baohanh varchar(50),
+    dungluong varchar(50),
+    kichthuoc varchar(50),
+    ketnoi varchar(50),
+    tocdovongquay varchar(50),
+    cache varchar(50),
+    hedieuhanh varchar(50),
+    mahang varchar(50),
+    giaban varchar(50)
+);
+
+CREATE TABLE detaillaptop(
+
+    	idlaptop int PRIMARY KEY AUTO_INCREMENT,
+    idsanpham int,
+    tenlaptop varchar(255),
+    baohanh varchar(100),
+    giaban varchar(100),
+    hangsanxuat varchar(100),
+    tenbovixuly varchar(100),
+    tocdo varchar(100),
+    bonhodem varchar(100),
+    dungluongram varchar(100),
+    sokheram varchar(100),
+    dungluonghdd varchar(100),
+    khanangluutruhdd varchar(100),
+    manhinh varchar(100),
+    dophangiai varchar(100),
+    boxulyvga varchar(100),
+    congnghevga varchar(100),
+    lan varchar(100),
+    wireless varchar(100),
+    bluetooth varchar(100),
+    congusb varchar(100),
+    hdmi varchar(100),
+    khecamthenho varchar(100),
+    audio varchar(100),
+    camera varchar(100),
+    kieubanphim varchar(100),
+    dungluongpin varchar(100),
+    thoigiansudung varchar(100),
+    hedieuhanh varchar(100),
+    trongluong varchar(100),
+    mausac varchar(100),
+    thietke varchar(100),
+    phukiendikem varchar(100),
+    url_image varchar(500),
+    loa varchar(100),
+    quatang varchar(500)
+
+);
+
+CREATE TABLE detailmainboard
+(
+	idmainboard int AUTO_INCREMENT PRIMARY KEY,
+    tenhang varchar(100),
+    model varchar(100),
+    cpuhotro varchar(100),
+    socket varchar(50),
+    chipset varchar(50),
+    ramhotro varchar(50),
+    khecammorong varchar(50),
+    ocunghotro varchar(50),
+    congketnoiinternal varchar(50),
+    congketnoibackpanel varchar(50),
+    lanandwireless varchar(50),
+    kichco varchar(50),
+    baohanh varchar(50),
+    tinhtrang varchar(50),
+    mahang varchar(50),
+    giaban varchar(50),
+);
+
+CREATE TABLE detailmonitor
+(
+	idmonitor int AUTO_INCREMENT PRIMARY KEY,
+    tenhang varchar(100),
+    model varchar(100),
+    kieumanhinh varchar(100),
+    kichthuocmanhinh varchar(100),
+    dosang varchar(100),
+    tiletuongphan varchar(50),
+    dophangiai varchar(50),
+    thoigiandapung varchar(50),
+    gocnhin varchar(50),
+    conggiaotiep varchar(50),
+    xuatxu varchar(50),
+    mahang varchar(50),
+    baohanh varchar(50),
+    congsuattieuthu varchar(50),
+    speaker varchar(50),
+    congnghe varchar(50),
+    giaban varchar(50)
+);
+
+CREATE TABLE detailssd
+(
+	idssd int AUTO_INCREMENT PRIMARY KEY,
+    dungluong varchar(50),
+    giaotiep varchar(50),
+    tocdo varchar(50),
+    mtbf varchar(50),
+    baohanh varchar(50),
+    hangsx varchar(50),
+    mahang varchar(50),
+    giaban varchar(50),
+    tinhtrang varchar(50)
+);
+
+CREATE TABLE khachhang
+(
+	idkhachhang int AUTO_INCREMENT PRIMARY KEY,
+    idtaikhoan int,
+    diachi varchar(100),
+    sothenganhang varchar(50),
+    ngaytaotk datetime
+);
+
+CREATE TABLE loaisanpham
+(
+	idmaloaisanpham int AUTO_INCREMENT PRIMARY KEY,
+    tenmaloaisanpham varchar(50)
+    
+);
+
+CREATE TABLE sanpham
+(
+	idsanpham int AUTO_INCREMENT PRIMARY KEY,
+    idmaloaisanpham varchar(50)
+    
+);
+
+CREATE TABLE taikhoan
+(
+	idtaikhoan int AUTO_INCREMENT PRIMARY KEY,
+    username varchar(100),
+    password longtext,
+    email varchar(100),
+    ngaysinh datetime,
+    cmnd varchar(20),
+    Ho varchar(50),
+    Ten varchar(20),
+    isadmin bit
+);
